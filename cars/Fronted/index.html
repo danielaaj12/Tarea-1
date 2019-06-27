@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css?family=Oswald|Raleway&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <title>Brands and Cars </title>
+</head>
+
+<body>
+  <img src="" alt="">
+  <h1>Cars and Brands Iventory</h1>
+  <input class="search" type="search" placeholder="Buscar">
+  <div class="js-nav nav"></div>
+  <h4>Marcas Registradas</h4>
+  <div class="create-form form-car">
+    <form action="http://localhost:1234/api/v1/cars" method="POST">
+      <h2 class="create-title">Crear Carro</h2>
+      <label for="name">Nombre</label>
+      <input type="text" name="name" id="name" value="" />
+
+      <label for="description">Descripción</label>
+      <input type="text" name="description" id="name" value="" />
+
+      <label for="year">Año del modelo</label>
+      <input type="number" name="year" id="name" />
+
+      <label for="color">Color</label>
+      <input type="text" name="color" id="name" />
+
+      <label for="date">Fecha de carro</label>
+      <input type="date" name="date" id="name" />
+
+      <input type="submit" id="btn-submit-car" class="js-submit">
+    </form>
+  </div>
+
+  <div class="create-form form-brand">
+    <form action="http://localhost:1234/api/v1/brands" method="post">
+      <h2 class="create-title">Crear Marca</h2>
+      <label for="name">Name:</label>
+      <input type="text" name="name" id="name" />
+
+      <label for="description">Description:</label>
+      <input type="text" name="description" id="name" />
+
+      <input type="submit" class="js-submit">
+    </form>
+  </div>
+
+  <div class="inventory-brands clearfix js-all-brands">
+    <div class="nav">
+      <button class="btn-add add-brand">Añadir carro</button>
+    </div>
+  </div>
+  <div class="inventory js-inventory"></div>
+  <script src="js/view.js"></script>
+</body>
+
+</html>
